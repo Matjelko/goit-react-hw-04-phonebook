@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import Filter from "../Filter/Filter";
 import ContactForm from "../ContactForm/ContactForm";
 import ContactList from "../ContactList/ContactList";
+import PropTypes from "prop-types";
 import '../../index.css';
 
 const App = () => {
@@ -58,6 +59,13 @@ const App = () => {
       <ContactList contacts={filteredContacts} onDeleteContact={handleDeleteContact}/>
     </div>
   )
+}
+
+App.propTypes = {
+  handleFilterChange: PropTypes.func,
+  handleAddContact: PropTypes.func,
+  handleDeleteContact: PropTypes.func,
+  filteredContacts: PropTypes.func
 }
 
 export default App;

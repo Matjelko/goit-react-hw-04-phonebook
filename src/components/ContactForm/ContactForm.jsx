@@ -52,7 +52,10 @@ const ContactForm = ({ onAddContact }) => {
 }
 
 ContactForm.propTypes = {
-    onAddContact: PropTypes.func
+    onAddContact: PropTypes.func,
+    handleNameChange: PropTypes.func,
+    handleNumberChange: PropTypes.func,
+    handleSubmit: PropTypes.func
 }
 
 export default ContactForm
